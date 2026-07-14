@@ -58,7 +58,7 @@ function openDetail(id,updateHash=true){const m=markets.find(x=>x.id===id);if(!m
 
 function vendorSearchUrl(m,v){return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(v.name+' '+m.name+' '+m.city)}`}
 function vendorCards(m){
-  const list=marketVendors[m.id]||[];
+  const list=[...(marketVendors[m.id]||[]),...(extraMarketVendors[m.id]||[])];
   const labels=lang==='zh'
     ?{title:'推薦攤位',count:`精選 ${list.length} 間`,item:'主打',why:'推薦原因',search:'Google 搜尋',note:'攤位營業時間、位置與店名可能調整，出發前請以現場及 Google 最新資訊為準。'}
     :{title:'Recommended vendors',count:`${list.length} picks`,item:'Try',why:'Why go',search:'Search Google',note:'Vendor names, locations and hours may change. Confirm with current on-site and Google information before visiting.'};
