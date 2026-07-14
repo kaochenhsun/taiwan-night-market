@@ -193,3 +193,34 @@ const marketVendors = {
     vendor("竹北鮮奶麻糬","鮮奶麻糬","奶香柔軟、甜度溫和，是親子共享的收尾甜點。","Zhubei Milk Mochi","Milk mochi","Soft, milky and mildly sweet for a family-friendly finish.")
   ]
 };
+
+// A sixth visitor pick for every market, keeping every guide above five stalls.
+const extraMarketVendors = {
+  0:[vendor("鍾家原上海生煎包","鮮肉生煎包","現煎外皮底部焦脆，內餡多汁，適合趁熱分食。","Zhong Shanghai Pan-fried Buns","Pork pan-fried buns","Freshly griddled buns with crisp bottoms and juicy pork filling.")],
+  1:[vendor("小明冰果室","木瓜牛奶","水果香濃、口感滑順，是吃完胡椒餅與排骨後的清爽收尾。","Xiao Ming Fruit Bar","Papaya milk","A smooth, refreshing finish after pepper buns and herbal ribs.")],
+  2:[vendor("樂華郭記麻辣臭豆腐","麻辣臭豆腐","豆腐吸滿香辣湯汁，可依喜好調整辣度，適合當宵夜主食。","Lehua Guo Spicy Tofu","Spicy stinky tofu","Tofu soaked in a fragrant chili broth with adjustable heat.")],
+  3:[vendor("板橋王記好吃麻油雞","麻油雞","薑香與麻油香濃郁，湯頭溫暖，是冷天很受歡迎的選擇。","Wang Sesame Oil Chicken","Sesame oil chicken","A warming bowl rich with ginger and toasted sesame aroma.")],
+  4:[vendor("桃園夜市潤餅","傳統潤餅","薄餅包入高麗菜、豆干與花生粉，清爽又有飽足感。","Taoyuan Night-Market Popiah","Taiwanese spring roll","A soft wrapper filled with vegetables, tofu and peanut powder.")],
+  5:[vendor("柳家肉燥飯","肉燥飯","鹹香肉燥淋在熱飯上，可搭貢丸湯組成完整的新竹小吃餐。","Liu Braised Pork Rice","Braised pork rice","Savory pork over rice, ideal beside Hsinchu meatball soup.")],
+  6:[vendor("苗栗客家鹹豬肉","客家鹹豬肉","鹹香豬肉煎烤至表面焦香，搭配蒜片展現苗栗客家風味。","Miaoli Hakka Salted Pork","Hakka salted pork","Grilled savory pork served with garlic for a classic Hakka flavor.")],
+  7:[vendor("官芝霖大腸包小腸","大腸包小腸","糯米腸夾香腸與配料，是逢甲最具代表性的邊走邊吃小吃。","Guan Zhi Lin Sausage","Sausage in sticky-rice sausage","Feng Chia's iconic handheld snack with sausage and condiments.")],
+  8:[vendor("忠孝夜市味泉米糕","筒仔米糕","糯米吸附肉燥香氣，搭配甜辣醬與小菜很有台中宵夜感。","Weiquan Rice Cake","Sticky rice cake","Savory sticky rice topped with braised pork and sweet chili sauce.")],
+  9:[vendor("彰化爌肉飯夜市攤","爌肉飯","滷得軟嫩的豬肉配白飯與酸菜，是彰化最有代表性的飽足主食。","Changhua Braised Pork Rice","Braised pork rice","Tender pork, rice and pickles make a signature Changhua meal.")],
+ 10:[vendor("草屯麻糬小舖","手工麻糬","柔軟麻糬裹花生或芝麻粉，適合多人分食當作甜點。","Caotun Mochi Stall","Handmade mochi","Soft mochi coated in peanut or sesame powder for sharing.")],
+ 11:[vendor("斗六魷魚羹","魷魚羹","彈牙魷魚配濃郁羹湯，是雲林夜市常見又有飽足感的選擇。","Douliu Squid Soup","Squid thick soup","Springy squid in a savory thick broth, filling and comforting.")],
+ 12:[vendor("阿娥豆花","豆漿豆花","細嫩豆花配豆漿湯底，甜度柔和，適合文化路美食巡禮收尾。","A-E Tofu Pudding","Soy-milk tofu pudding","Silky tofu pudding in soy milk for a gentle sweet finish.")],
+ 13:[vendor("朴子鴨肉羹","鴨肉羹","鴨肉與筍絲融入甜鹹羹湯，呈現嘉義沿海小鎮的家常味。","Puzi Duck Soup","Duck thick soup","Duck and bamboo shoots in a sweet-savory Chiayi-style broth.")],
+ 14:[vendor("花園夜市統大炭烤香雞排","炭烤雞排","雞排先炸後烤並刷醬，帶有明顯炭香，適合兩人共享。","Tong Da Charcoal Chicken","Charcoal chicken cutlet","Fried, grilled and glazed for a smoky cutlet made to share.")],
+ 15:[vendor("台南棺材板","棺材板","厚片吐司炸酥後填入濃湯餡，是外國旅客容易記住的台南特色。","Tainan Coffin Bread","Coffin bread","Crisp thick toast filled with creamy stew, a memorable Tainan specialty.")],
+ 16:[vendor("鄭老牌木瓜牛奶","木瓜牛奶","現打木瓜牛奶濃醇滑順，是六合夜市最經典的飲品之一。","Zheng Papaya Milk","Papaya milk","A rich freshly blended drink and a Liuhe Night Market classic.")],
+ 17:[vendor("瑞豐萬國牛排","夜市牛排","鐵板牛排搭麵與蛋，份量充足，適合想吃完整正餐的旅客。","Ruifeng Sizzling Steak","Night-market steak","Steak, noodles and egg make a hearty full meal.")],
+ 18:[vendor("屏東肉圓","蒸肉圓","柔軟外皮包肉餡，淋上甜鹹醬汁，是屏東代表性的傳統小吃。","Pingtung Meatball","Steamed ba-wan","A soft starch dumpling with pork filling and sweet-savory sauce.")],
+ 19:[vendor("阿灶伯當歸羊肉湯","當歸羊肉湯","藥膳湯頭溫和、羊肉嫩，是羅東夜市人氣很高的暖胃料理。","A-Zao-Buo Lamb Soup","Herbal lamb soup","Tender lamb in a gently herbal broth, a Luodong favorite.")],
+ 20:[vendor("蔣家花蓮創意棺材板","創意棺材板","酥炸吐司加入多種鹹甜餡料，份量適合兩人分享。","Chiang Hualien Coffin Bread","Stuffed fried toast","Crisp toast with creative savory or sweet fillings for sharing.")],
+ 21:[vendor("藍蜻蜓速食專賣店","炸雞","外皮酥香、肉質多汁，是台東旅途中很有辨識度的在地炸雞。","Blue Dragonfly Fried Chicken","Fried chicken","A beloved Taitung fried chicken with crisp skin and juicy meat.")],
+ 22:[vendor("澎湖小管麵線","小管麵線","新鮮小管搭配清甜海鮮湯與麵線，能直接品嚐澎湖海味。","Penghu Squid Vermicelli","Squid vermicelli","Fresh squid and fine noodles in a naturally sweet seafood broth.")],
+ 23:[vendor("金門蛋狗","蛋餅夾熱狗","蛋餅包入熱狗與醬料，是金門學生與旅客熟悉的特色點心。","Kinmen Egg Dog","Egg pancake with hot dog","A playful Kinmen snack wrapping a hot dog in an egg pancake.")],
+ 24:[vendor("馬祖魚麵攤","魚麵","以魚漿製成的麵條口感彈牙，搭配清湯最能展現島嶼風味。","Matsu Fish Noodles","Fish noodles","Springy noodles made from fish paste and served in a clear broth.")],
+ 25:[vendor("沈家泡泡冰","花生泡泡冰","綿密冰品帶濃郁花生香，是基隆廟口最受歡迎的甜點之一。","Shen Bubble Ice","Peanut bubble ice","Fluffy peanut ice, one of Miaokou's best-known desserts.")],
+ 26:[vendor("竹北客家小炒","客家小炒","魷魚、豆干與豬肉拌炒出鹹香鍋氣，展現新竹客家飲食特色。","Zhubei Hakka Stir-fry","Hakka stir-fry","Squid, tofu and pork wok-fried for a savory Hakka specialty.")]
+};
