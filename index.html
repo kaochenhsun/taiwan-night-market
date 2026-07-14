@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="夜遊台灣：雙語台灣夜市導覽，依縣市、營業日與特色探索人氣夜市。" />
+  <meta name="theme-color" content="#101820" />
+  <title>夜遊台灣 Night Market Taiwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="detail.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="回到首頁">
+      <span class="brand-mark">夜</span>
+      <span><b>夜遊台灣</b><small>NIGHT MARKET TAIWAN</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="#explore" data-i18n="navExplore">探索夜市</a>
+      <a href="#tips" data-i18n="navTips">夜市攻略</a>
+      <button id="langToggle" class="lang-btn" type="button" aria-label="Switch to English">EN</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
+      <div class="lanterns" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">從北到南，一口吃遍台灣</p>
+        <h1><span data-i18n="heroLine1">今晚，</span><em data-i18n="heroLine2">逛哪一攤？</em></h1>
+        <p class="hero-desc" data-i18n="heroDesc">收錄全台人氣夜市，用城市、營業日與旅行偏好，找到今晚最對味的去處。</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#explore"><span data-i18n="startExplore">開始探索</span><b>↘</b></a>
+          <button class="surprise-btn" id="surpriseBtn" type="button"><span>✦</span> <span data-i18n="surprise">幫我選一個</span></button>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="marketStat">27</strong><span data-i18n="statMarkets">精選夜市</span></div>
+          <div><strong>22</strong><span data-i18n="statCities">縣市導覽</span></div>
+          <div><strong>2</strong><span data-i18n="statLang">語言切換</span></div>
+        </div>
+      </div>
+      <div class="hero-poster" aria-hidden="true">
+        <div class="poster-stamp">TAIWAN<br><b>夜市</b><br>GUIDE</div>
+        <div class="food-orbit orbit-1">胡椒餅</div><div class="food-orbit orbit-2">珍奶</div><div class="food-orbit orbit-3">雞排</div>
+        <span class="poster-year">EST. 2026</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true"><div>蚵仔煎 · OYSTER OMELET · 臭豆腐 · STINKY TOFU · 珍珠奶茶 · BUBBLE TEA · 鹽酥雞 · FRIED CHICKEN · 蚵仔煎 · OYSTER OMELET · 臭豆腐 ·</div></section>
+
+    <section class="explore" id="explore">
+      <div class="section-head">
+        <div><p class="eyebrow" data-i18n="findEyebrow">找到你的今晚</p><h2 data-i18n="findTitle">探索夜市</h2></div>
+        <p data-i18n="findDesc">先選縣市，也可以用關鍵字或特色快速縮小範圍。</p>
+      </div>
+
+      <div class="filter-panel">
+        <label class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="搜尋夜市、美食或縣市…" />
+        </label>
+        <div class="select-row">
+          <label><span data-i18n="cityLabel">縣市</span><select id="citySelect" aria-label="選擇縣市"></select></label>
+          <label><span data-i18n="dayLabel">營業日</span><select id="daySelect" aria-label="選擇營業日"></select></label>
+          <label><span data-i18n="featureLabel">旅行偏好</span><select id="featureSelect" aria-label="選擇旅行偏好"></select></label>
+          <button id="resetBtn" class="reset-btn" type="button" data-i18n="reset">清除篩選</button>
+        </div>
+      </div>
+
+      <div class="result-bar"><p><strong id="resultCount">0</strong> <span data-i18n="results">個夜市等你探索</span></p><span class="live-dot"><i></i><span data-i18n="localData">免登入，立即使用</span></span></div>
+      <div id="marketGrid" class="market-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden><span>空</span><h3 data-i18n="emptyTitle">沒有找到相符夜市</h3><p data-i18n="emptyDesc">換個關鍵字或清除篩選再看看。</p></div>
+    </section>
+
+    <section class="tips" id="tips">
+      <div class="tips-intro"><p class="eyebrow" data-i18n="tipsEyebrow">像在地人一樣逛</p><h2 data-i18n="tipsTitle">第一次逛夜市？<br>記住這四件事。</h2></div>
+      <div class="tip-list">
+        <article><span>01</span><div><h3 data-i18n="tip1Title">帶現金與零錢</h3><p data-i18n="tip1Desc">多數攤商仍以現金交易，小額鈔票最好用。</p></div></article>
+        <article><span>02</span><div><h3 data-i18n="tip2Title">避開用餐尖峰</h3><p data-i18n="tip2Desc">想悠閒逛，建議 17:30 前抵達；越晚越熱鬧。</p></div></article>
+        <article><span>03</span><div><h3 data-i18n="tip3Title">垃圾不落地</h3><p data-i18n="tip3Desc">垃圾桶不一定多，先留著交給原攤商或集中處。</p></div></article>
+        <article><span>04</span><div><h3 data-i18n="tip4Title">出發前再確認</h3><p data-i18n="tip4Desc">營業日可能因天候或活動調整，建議出發前查詢最新公告。</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="brand footer-brand"><span class="brand-mark">夜</span><span><b>夜遊台灣</b><small>NIGHT MARKET TAIWAN</small></span></div><p data-i18n="footerText">今晚的台灣，從一盞燈籠開始。</p><a href="#top" aria-label="回到頂端">↑</a></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="detailDialog" class="detail-dialog" aria-labelledby="detailTitle">
+    <button id="detailClose" class="detail-close" type="button" aria-label="關閉">×</button>
+    <div id="detailContent"></div>
+  </dialog>
+  <dialog id="pickDialog" class="pick-dialog" aria-labelledby="pickTitle">
+    <button id="pickClose" class="detail-close" type="button" aria-label="關閉">×</button>
+    <div id="pickContent"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
