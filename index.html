@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="夜遊台灣：雙語台灣夜市導覽，依縣市、營業日與特色探索人氣夜市。" />
+  <meta name="description" content="遊台灣：雙語台灣夜市與景點導覽，包含全台熱門景點、拍照機位與在地夜市。" />
   <meta name="theme-color" content="#101820" />
   <title>夜遊台灣 Night Market Taiwan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="detail.css" />
   <link rel="stylesheet" href="vendors.css" />
+  <link rel="stylesheet" href="attractions.css?v=1" />
 </head>
 <body>
   <header class="nav">
@@ -20,7 +21,7 @@
       <span><b>夜遊台灣</b><small>NIGHT MARKET TAIWAN</small></span>
     </a>
     <nav aria-label="主要導覽">
-      <a href="#explore" data-i18n="navExplore">探索夜市</a>
+      <a href="#categories" data-i18n="navExplore">探索台灣</a>
       <a href="#tips" data-i18n="navTips">夜市攻略</a>
       <button id="langToggle" class="lang-btn" type="button" aria-label="Switch to English">EN</button>
     </nav>
@@ -53,6 +54,21 @@
 
     <section class="ticker" aria-hidden="true"><div>蚵仔煎 · OYSTER OMELET · 臭豆腐 · STINKY TOFU · 珍珠奶茶 · BUBBLE TEA · 鹽酥雞 · FRIED CHICKEN · 蚵仔煎 · OYSTER OMELET · 臭豆腐 ·</div></section>
 
+    <section class="category-switcher" id="categories" aria-label="導覽分類">
+      <div>
+        <p class="eyebrow">EXPLORE TAIWAN</p>
+        <h2 id="categoryTitle">想逛夜市，還是拍台灣？</h2>
+      </div>
+      <div class="category-tabs" role="tablist">
+        <button class="category-tab active" id="marketTab" type="button" data-category="markets" role="tab" aria-selected="true">
+          <span>01</span><b id="marketTabLabel">夜市導覽</b><small>76 NIGHT MARKETS</small>
+        </button>
+        <button class="category-tab" id="attractionTab" type="button" data-category="attractions" role="tab" aria-selected="false">
+          <span>02</span><b id="attractionTabLabel">景點與拍照機位</b><small>66 PHOTO SPOTS</small>
+        </button>
+      </div>
+    </section>
+
     <section class="explore" id="explore">
       <div class="section-head">
         <div><p class="eyebrow" data-i18n="findEyebrow">找到你的今晚</p><h2 data-i18n="findTitle">探索夜市</h2></div>
@@ -77,6 +93,25 @@
       <div id="emptyState" class="empty-state" hidden><span>空</span><h3 data-i18n="emptyTitle">沒有找到相符夜市</h3><p data-i18n="emptyDesc">換個關鍵字或清除篩選再看看。</p></div>
     </section>
 
+    <section class="attraction-explore" id="attractions" hidden>
+      <div class="section-head attraction-heading">
+        <div><p class="eyebrow">PHOTO GUIDE · 22 CITIES</p><h2 id="attractionTitle">台灣景點與拍照機位</h2></div>
+        <p id="attractionIntro">官方必遊景點加上網路熱門打卡地；每個景點都整理好拍攝站位、方向、時間與鏡頭建議。</p>
+      </div>
+      <div class="filter-panel attraction-filter">
+        <label class="search-wrap"><span>⌕</span><input id="attractionSearch" type="search" placeholder="搜尋景點、縣市或拍攝主題…" /></label>
+        <div class="select-row attraction-select-row">
+          <label><span id="attractionCityLabel">縣市</span><select id="attractionCity"></select></label>
+          <label><span id="attractionTypeLabel">景點類型</span><select id="attractionType"></select></label>
+          <label><span id="attractionThemeLabel">拍攝主題</span><select id="attractionTheme"></select></label>
+          <button id="attractionReset" class="reset-btn" type="button">清除篩選</button>
+        </div>
+      </div>
+      <div class="result-bar"><p><strong id="attractionCount">0</strong> <span id="attractionResultText">個景點與拍照機位</span></p><span class="live-dot"><i></i><span id="attractionCoverage">涵蓋全台 22 縣市</span></span></div>
+      <div id="attractionGrid" class="attraction-grid" aria-live="polite"></div>
+      <div id="attractionEmpty" class="empty-state" hidden><span>景</span><h3>沒有找到相符景點</h3><p>換個關鍵字或清除篩選再看看。</p></div>
+    </section>
+
     <section class="tips" id="tips">
       <div class="tips-intro"><p class="eyebrow" data-i18n="tipsEyebrow">像在地人一樣逛</p><h2 data-i18n="tipsTitle">第一次逛夜市？<br>記住這四件事。</h2></div>
       <div class="tip-list">
@@ -98,7 +133,12 @@
     <button id="pickClose" class="detail-close" type="button" aria-label="關閉">×</button>
     <div id="pickContent"></div>
   </dialog>
+  <dialog id="attractionDialog" class="detail-dialog attraction-dialog" aria-labelledby="attractionDetailTitle">
+    <button id="attractionClose" class="detail-close" type="button" aria-label="關閉">×</button>
+    <div id="attractionDetail"></div>
+  </dialog>
   <script src="vendors.js?v=2"></script>
-  <script src="app.js?v=4"></script>
+  <script src="app.js?v=5"></script>
+  <script src="attractions.js?v=1"></script>
 </body>
 </html>
